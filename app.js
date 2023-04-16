@@ -18,12 +18,16 @@ app.use(express.urlencoded({ extended: true }))
 // Définition du moteur de template utilisé ( PUG )
 app.set('view engine', 'pug')
 
-// Définition d'une première route
-app.get('/', (_, res) => {
-    res.status(200).json({
-        message: 'Bienvenue sur cette application',
-    })
+// Utilisation du router INTERFACe
+const routerINTERFACE = require('./router/interface.routes')
+app.use('/', routerINTERFACE)
+
+// Utilisation du router API
+const routerAPI = require('./router/api.routes')
+app.get('/api', (_, res) => {
+    res.redirect('/api/v1')
 })
+app.use('/api/v1', routerAPI)
 
 // Démarrage du serveur
 app.listen(PORT, () => {

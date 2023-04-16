@@ -1,25 +1,26 @@
 {
-  "name": "gestionnaire_contact",
-  "version": "1.0.0",
-  "description": "Réalisation d'un gestionnaire de contact en full NodeJS.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "morgan": "^1.10.0"
-  },
-  "dependencies": {
-    "boxen": "^5.1.2",
-    "chalk": "^5.2.0",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.3",
-    "pug": "^3.0.2"
-  }
+    "name": "gestionnaire_contact",
+    "version": "1.0.0",
+    "description": "Réalisation d'un gestionnaire de contact en full NodeJS.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "morgan": "^1.10.0"
+    },
+    "dependencies": {
+        "boxen": "^5.1.2",
+        "chalk": "^5.2.0",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.0.3",
+        "pug": "^3.0.2"
+    }
 }

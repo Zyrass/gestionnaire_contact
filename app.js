@@ -27,8 +27,13 @@ app.get('/', (_, res) => {
 
 // Démarrage du serveur
 app.listen(PORT, () => {
-    boxen(`Serveur démarrer sur cette adresse: http://${HOSTNAME}:${PORT}`, {
-        padding: 1,
-        margin: 1,
-    })
+    console.log(
+        boxen(
+            `Serveur démarrer sur cette adresse: http://${HOSTNAME}:${PORT}`,
+            {
+                padding: 1,
+                margin: 1,
+            },
+        ),
+    )
 })

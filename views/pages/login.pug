@@ -3,3 +3,9 @@ extends ../layout/layout.pug
 block container
   main
     h1 Connectez-vous à votre compte
+
+    .card
+      form(action="/login") 
+        label(for="email") Votre Email:
+        input(type="text", placeholder="Inscrivez un email ici.")
+        button(type="submit") Se connecter

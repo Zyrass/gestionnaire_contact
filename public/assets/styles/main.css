@@ -1,3 +1,66 @@
-h1 {
-    color: red
+:root {
+  --primary: mediumslateblue;
+  --secondary: #333;
+  --white: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--secondary);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 54px 1fr 54px;
+  grid-template-areas:
+    'navigation'
+    'container'
+    'footer';
+}
+
+header {
+  grid-area: navigation;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+header nav {
+  height: 54px;
+  display: flex;
+  align-content: center;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav ul li {
+  transition: background-color 0.4s ease-in-out;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  padding: 0 8px;
+  color: var(--secondary);
+  transition: color 0.4s ease-in-out;
+}
+
+header nav ul li:hover {
+  background-color: var(--secondary);
+}
+header nav ul li:hover a {
+  color: var(--white);
 }

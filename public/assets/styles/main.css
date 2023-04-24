@@ -11,6 +11,12 @@
   color: var(--white);
 }
 
+h1 {
+  font-size: 69px;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
 ul {
   list-style: none;
 }
@@ -70,7 +76,36 @@ main {
   grid-area: container;
   background-color: var(--primary);
   box-shadow: 0 0 25px var(--secondary) inset;
+  padding: 5%;
 }
+main > p {
+  letter-spacing: 1.6px;
+  margin: 20px 0px;
+}
+main section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+main section .user {
+  background-color: var(--white);
+  padding: 5%;
+  width: 50%;
+}
+main section .user h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--primary);
+}
+main section .user p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 48px;
+  color: var(--secondary);
+}
+
 /* FOOTER */
 footer {
   grid-area: footer;

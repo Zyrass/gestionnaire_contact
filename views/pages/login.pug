@@ -1,11 +1,21 @@
 extends ../layout/layout.pug
 
+block styles
+  link(rel="stylesheet", href="/assets/styles/login.css")
+
+
 block container
   main
-    h1 Connectez-vous à votre compte
+    h1 Connexion
+    p Formulaire de connexion à son compte utilisateur.
 
-    .card
-      form(action="/login") 
-        label(for="email") Votre Email:
-        input(type="text", placeholder="Inscrivez un email ici.")
-        button(type="submit") Se connecter
+    section(class="loginCard")
+      form(action="/login" method="POST")
+        .form-group
+          label(for="email") Votre Email:
+          input(type="text", placeholder="Inscrivez un email ici.")
+        .form-group
+          label(for="password") Votre Mot de passe:
+          input(type="text", placeholder="Mot de passe")
+        .form-group
+          button(type="submit") Se connecter

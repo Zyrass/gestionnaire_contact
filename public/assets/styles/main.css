@@ -80,26 +80,31 @@ main {
 }
 main > p {
   letter-spacing: 1.6px;
-  margin: 20px 0px;
+  margin: 40px 0px;
 }
-main section {
-  display: flex;
+main section.counter {
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   width: 100%;
 }
-main section .user {
+main section .userRegistered,
+main section .contactRegistered {
   background-color: var(--white);
   padding: 5%;
-  width: 50%;
+  width: 100%;
 }
-main section .user h2 {
+main section .userRegistered h2,
+main section .contactRegistered h2 {
   text-align: center;
   font-size: 28px;
   color: var(--primary);
 }
-main section .user p {
+main section .userRegistered p,
+main section .contactRegistered p {
   margin-top: 20px;
   text-align: center;
   font-size: 48px;
